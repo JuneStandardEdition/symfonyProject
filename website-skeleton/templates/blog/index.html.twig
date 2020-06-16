@@ -5,39 +5,21 @@
 {% block body %}
 <br>
     <section class="articles">
+
+        {% for article in articles %}
     
-        <article>
-            <h2>titre de l'article</h2>
-            <div class="metadata">ecrit le 10/06/2020 à 19:51 dans la catégorie Politique</div>
-            <div class="content">
-                <img src="http://placehold.it/350x150" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil quia quae ut eligendi consectetur.</p>
-                <p>Iure, quod. Provident voluptatem ipsa inventore molestias, magni voluptas porro non harum quia in corrupti.</p>
-                <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
-            </div>
-        </article>
-        <br>
-        <article>
-            <h2>titre de l'article</h2>
-            <div class="metadata">ecrit le 10/06/2020 à 19:51 dans la catégorie Politique</div>
-            <div class="content">
-                <img src="http://placehold.it/350x150" alt="">
-                <p>Eius, velit cumque. Dolor architecto dicta sunt voluptatem, quasi ab vitae non impedit voluptate praesentium.</p>
-                <p>Dolorem expedita voluptates fugit perspiciatis tempora enim deleniti, porro omnis corporis sed a iste error?</p>
-                <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
-            </div>
-        </article>
-        <br>
-        <article>
-            <h2>titre de l'article</h2>
-            <div class="metadata">ecrit le 10/06/2020 à 19:51 dans la catégorie Politique</div>
-            <div class="content">
-                <img src="http://placehold.it/350x150" alt="">
-                <p>Voluptatem temporibus, iure illum voluptate ratione neque alias tempore modi natus eaque cum magnam beatae?</p>
-                <p>Veniam sint doloribus corrupti maiores facere eos voluptatum nisi, cumque repellat dolor. Voluptas, aut molestiae.</p>
-                <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
-            </div>
-        </article>
+            <article>
+                <h2>{{ article.title }}</h2>
+                <div class="metadata">Ecrit le {{ article.createdAt|date('d/m/y') }} dans la catégorie Politique</div>
+                <div class="content">
+                    <img src="{{ article.image }}" alt="img">
+                    {{ article.content|raw }}
+                    <a href="{{ path('blog_show', {'id':article.id}) }}" class="btn btn-primary">Lire la suite</a>
+                </div>
+            </article>
+            <br>
+
+        {% endfor %}
 
     </section>
 {% endblock %}
