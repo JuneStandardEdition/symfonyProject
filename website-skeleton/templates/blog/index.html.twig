@@ -3,18 +3,41 @@
 {% block title %}Hello BlogController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<br>
+    <section class="articles">
+    
+        <article>
+            <h2>titre de l'article</h2>
+            <div class="metadata">ecrit le 10/06/2020 à 19:51 dans la catégorie Politique</div>
+            <div class="content">
+                <img src="http://placehold.it/350x150" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil quia quae ut eligendi consectetur.</p>
+                <p>Iure, quod. Provident voluptatem ipsa inventore molestias, magni voluptas porro non harum quia in corrupti.</p>
+                <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+            </div>
+        </article>
+        <br>
+        <article>
+            <h2>titre de l'article</h2>
+            <div class="metadata">ecrit le 10/06/2020 à 19:51 dans la catégorie Politique</div>
+            <div class="content">
+                <img src="http://placehold.it/350x150" alt="">
+                <p>Eius, velit cumque. Dolor architecto dicta sunt voluptatem, quasi ab vitae non impedit voluptate praesentium.</p>
+                <p>Dolorem expedita voluptates fugit perspiciatis tempora enim deleniti, porro omnis corporis sed a iste error?</p>
+                <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+            </div>
+        </article>
+        <br>
+        <article>
+            <h2>titre de l'article</h2>
+            <div class="metadata">ecrit le 10/06/2020 à 19:51 dans la catégorie Politique</div>
+            <div class="content">
+                <img src="http://placehold.it/350x150" alt="">
+                <p>Voluptatem temporibus, iure illum voluptate ratione neque alias tempore modi natus eaque cum magnam beatae?</p>
+                <p>Veniam sint doloribus corrupti maiores facere eos voluptatum nisi, cumque repellat dolor. Voluptas, aut molestiae.</p>
+                <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+            </div>
+        </article>
 
-<div class="example-wrapper">
-    <h1>Salut {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'D:/Docus/IRL/STAGE/symfony/symfonyProject/website-skeleton/src/Controller/BlogController.php'|file_link(0) }}">src/Controller/BlogController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'D:/Docus/IRL/STAGE/symfony/symfonyProject/website-skeleton/templates/blog/index.html.twig'|file_link(0) }}">templates/blog/index.html.twig</a></code></li>
-    </ul>
-</div>
+    </section>
 {% endblock %}
