@@ -13,6 +13,11 @@
     {{ form_start(formArticle) }}
 
     {#}
+        {{ form_error(formArticle) }}
+        <!-- Permet de modifier les messages d'erreur (entre autre) -->
+    {#}
+
+    {#}
     <div class="form-group">
         <label for="">Titre</label>
         {{ form_widget(formArticle.title) }}
